@@ -39,7 +39,12 @@ figure {
   background-color: transparent;
   padding: 0 2%;
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  z-index: 999;
+  transition: 1.5s; }
+  .header-nav__outer.scrolled {
+    transition: 1.5s all;
+    background-color: #f2f0eb; }
 
 .header-nav__inner {
   justify-content: space-between; }
@@ -230,7 +235,8 @@ figure {
   padding: 2% 0;
   font-size: 12px;
   margin: 5% auto 0;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .coffee-section__button::after {
     display: block;
     content: "";
@@ -258,7 +264,7 @@ figure {
   margin-top: 13%; }
   .coffee-section__image-wrap img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover; }
 
 .coffee-section__info-wrap {
@@ -267,6 +273,67 @@ figure {
     text-decoration: underline; }
   .coffee-section__info-wrap h4:nth-of-type(2) {
     margin-top: 2%; }
+
+.coffee-section__modal-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px 20px;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  z-index: 999; }
+  .coffee-section__modal-wrap::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%; }
+  .coffee-section__modal-wrap.active {
+    opacity: 1;
+    visibility: visible; }
+
+.coffee-section__modal-body {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 700px;
+  width: 90vw; }
+
+.coffee-section__modal-close {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -40px;
+  right: -40px;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer; }
+
+.coffee-section__modal-content {
+  background: #fff;
+  color: #333;
+  text-align: left;
+  padding: 5% 5% 5% 10%; }
+  .coffee-section__modal-content .coffee-section__heading {
+    margin-top: 0 !important; }
+  .coffee-section__modal-content hr {
+    background-color: #333; }
+  .coffee-section__modal-content dl {
+    font-size: 1.2rem; }
+  .coffee-section__modal-content dt {
+    float: left; }
+  .coffee-section__modal-content dd {
+    padding-left: 10%; }
+    .coffee-section__modal-content dd:not(:last-child) {
+      margin-bottom: 1%; }
 
 /* line up section */
 .lineup-section {
