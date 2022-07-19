@@ -54,4 +54,15 @@ $(function () {
       $("#modal-wrap" + 2).removeClass("active");
     }
   });
+
+  // sp menu
+  $(".header-nav__icon--sp-menu").on("click", function () {
+    $(this).addClass("inactive");
+    $(".header-nav__list--sp").animate({ right: "0" }, 500);
+  });
+
+  $(".header-nav__button--close").on("click", function () {
+    $(".header-nav__list--sp").animate({ right: "-80%" }, 500);
+    $(".header-nav__icon--sp-menu").removeClass("inactive");
+  });
 });

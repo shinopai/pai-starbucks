@@ -10,3 +10,10 @@
   line-height: 1.8;
   @content;
 }
+
+/* media query */
+@mixin mq($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

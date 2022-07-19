@@ -66,7 +66,45 @@
               /></a>
             </li>
           </ul>
+          <img
+            src="./asset/images/ico_menu.png"
+            alt="hamburger menu"
+            srcset=""
+            class="header-nav__icon--sp-menu"
+          />
         </div>
+        <!-- sp menu -->
+        <ul class="header-nav__list--sp">
+          <img
+            src="./asset/images/ico_close.png"
+            alt="close button"
+            srcset=""
+            class="header-nav__button--close"
+          />
+          <li><a href="#">LINE UP</a></li>
+          <li><a href="#">EVENT</a></li>
+          <li><a href="#">STORY</a></li>
+          <li><a href="#">COMMITMENT</a></li>
+          <li><a href="#">GALLERY</a></li>
+          <li><a href="#">MYPAGE</a></li>
+          <li class="sns-icons">
+            <a href="#"
+              ><img
+                src="./asset/images/icon_faceboock.svg"
+                alt="facebook"
+                srcset=""
+            /></a>
+            <a href="#"
+              ><img src="./asset/images/icon_insta.svg" alt="insta" srcset=""
+            /></a>
+            <a href="#"
+              ><img
+                src="./asset/images/icon_twitter.svg"
+                alt="twitter"
+                srcset=""
+            /></a>
+          </li>
+        </ul>
       </nav>
     </header>
 
@@ -83,7 +121,9 @@
         厳選した素材の奥深い味わい<br />上質な一杯で楽しむ、贅沢なひとときを
       </h2>
       <p class="material-section__text text-center">
-        スターバックスのカフェで過ごすちょっと特別なひとときを思い起こさせてくれる<br />シンプルだけれど奥深い、贅沢な味わい。<br />カフェと同じこだわりで作った特別な一杯を、<br />お好きなときに、お好きな場所で。
+        スターバックスのカフェで過ごす<br
+          class="sm-active"
+        />ちょっと特別なひとときを思い起こさせてくれる<br />シンプルだけれど奥深い、贅沢な味わい。<br />カフェと同じこだわりで作った特別な一杯を、<br />お好きなときに、お好きな場所で。
       </p>
       <div class="material-section__flex-wrap flex">
         <div class="material-section__flex-item">
@@ -104,7 +144,7 @@
           <img src="./asset/images/img_front03.jpg" alt="balance" />
           <h2 class="font-bold">BALANCE</h2>
           <p>
-            スターバックスが厳選したコーヒー豆を使用。生豆の状態でブレンドし長めにローストし、キャラメルのような甘味とリッチな深みを引き出しています。
+            コーヒーとミルク、甘さとのベストバランスを追求しました。スターバックスならではの、シンプルだけれど奥深い、贅沢な一杯が完成です。
           </p>
         </div>
       </div>
@@ -285,11 +325,16 @@
         </div>
       </div>
       <div class="coffee-section__image-wrap">
-        <img
-          src="./asset/images/img_front09.jpg"
-          alt="enjoy coffee"
-          srcset=""
-        />
+        <picture>
+          <source
+            srcset="./asset/images/img_front09.jpg"
+            media="(min-width: 521px)"
+          />
+          <img
+            class="p-latte_espresso__photo js-scrollanime fadeInDown"
+            src="./asset/images/img_front_sp03.jpg"
+          />
+        </picture>
       </div>
       <div class="coffee-section__info-wrap text-center">
         <h4 class="font-bold">販売エリア</h4>
@@ -364,10 +409,10 @@
       <div class="presen-section__flex-wrap flex">
         <a href="#" class="presen-section__link">
           <div class="presen-section__flex-item before">
-            <h2 class="coffee-section__heading font-bold">
+            <h2 class="font-bold">
               BRAND STORY
             </h2>
-            <h3 class="coffee-section__sub-heading font-bold">
+            <h3 class="font-bold">
               きょうは、どこをスターバックスにする？
             </h3>
             <p class="text-center">
@@ -388,10 +433,10 @@
       <div class="presen-section__flex-wrap flex">
         <a href="#" class="presen-section__link">
           <div class="presen-section__flex-item before">
-            <h2 class="coffee-section__heading font-bold">
+            <h2 class="font-bold">
               COMMITMENT
             </h2>
-            <h3 class="coffee-section__sub-heading font-bold">
+            <h3 class="font-bold">
               スターバックスのこだわり
             </h3>
             <p class="text-center">
@@ -411,10 +456,10 @@
       <div class="presen-section__flex-wrap flex">
         <a href="#" class="presen-section__link">
           <div class="presen-section__flex-item before">
-            <h2 class="coffee-section__heading font-bold">
+            <h2 class="font-bold">
               MY CHEERFUL MOMENT
             </h2>
-            <h3 class="coffee-section__sub-heading font-bold">
+            <h3 class="font-bold">
               私の華やぐティータイム
             </h3>
             <p class="text-center">
@@ -436,10 +481,10 @@
       <div class="presen-section__flex-wrap flex">
         <a href="#" class="presen-section__link">
           <div class="presen-section__flex-item before">
-            <h2 class="coffee-section__heading font-bold">
+            <h2 class="font-bold">
               GALLERY
             </h2>
-            <h3 class="coffee-section__sub-heading font-bold">
+            <h3 class="font-bold">
               チルドカップと過ごすひととき
             </h3>
             <p>
@@ -465,20 +510,22 @@
           srcset=""
           class="footer__logo"
         />
-        <img
-          src="./asset/images/logo_starbucks_text.svg"
-          alt="starbucks logo text"
-          srcset=""
-          class="footer__text-logo"
-        />
-        <ul class="footer__menu flex">
-          <li>お問い合わせ</li>
-          <li>プライバシーポリシー</li>
-          <li>会社概要</li>
-        </ul>
-        <small class="footer__copyrights"
-          >&copy;Starbucks Coffee Company. All Rights Reserved.</small
-        >
+        <div class="footer__contents">
+          <img
+            src="./asset/images/logo_starbucks_text.svg"
+            alt="starbucks logo text"
+            srcset=""
+            class="footer__text-logo"
+          />
+          <ul class="footer__menu flex">
+            <li>お問い合わせ</li>
+            <li>プライバシーポリシー</li>
+            <li>会社概要</li>
+          </ul>
+          <small class="footer__copyrights"
+            >&copy;Starbucks Coffee Company. All Rights Reserved.</small
+          >
+        </div>
         <div class="footer__arrow--back-to-top" id="back_to_top"></div>
       </div>
     </footer>
